@@ -6,7 +6,7 @@ const exec = require('child_process').exec;
 
 let paths = [];
 
-var init_objects = exec('grep --exclude-dir={node_modules,public,build} --exclude={*.md} -l -r className \*', (error, stdout, stderr) => {
+var init_objects = exec('grep --exclude-dir={node_modules,public,build} --exclude={*.md,*.scss,*.txt} -l -r className \*', (error, stdout, stderr) => {
 
   let raw = stdout;
 
@@ -63,6 +63,7 @@ const get_classes = (rawClassList) => {
         block: get_class_block(class_string),
         element: get_class_element(class_string),
         modifiers: JSON.stringify(get_class_modifiers(class_string)),
+        dynamic_modifiers: get_dynamic_modifiers(class_string)
       }
     })
 }
@@ -91,4 +92,8 @@ const get_class_modifiers = (string) => {
     let y = x.slice(1, x.length);
     return (y.length > 0) ? y : []
   }
+}
+
+const get_dynamic_modifiers = (string) => {
+
 }

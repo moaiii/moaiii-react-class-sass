@@ -1,0 +1,25 @@
+{
+  "name": "moaiii-react-class-sass",
+  "version": "1.0.0",
+  "description": "Automatically skeleton out your SASS classes from your project's JSX files",
+  "main": "react-class-sass.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moaiii/moaiii-react-class-sass.git"
+  },
+  "author": "Christopher Melville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moaiii/moaiii-react-class-sass/issues"
+  },
+  "homepage": "https://github.com/moaiii/moaiii-react-class-sass#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1"
+  }
+}
